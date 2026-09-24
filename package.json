@@ -1,19 +1,13 @@
 {
-  "name": "talksy",
+  "name": "nexus",
   "version": "1.0.0",
-  "private": true,
-  "type": "module",
-  "workspaces": [
-    "services/*",
-    "shared/*"
-  ],
+  "description": "**Nexus** is a real-time video calling and chat web application that enables users to connect instantly with friends through seamless messaging and high-quality video communication.",
+  "main": "index.js",
   "scripts": {
-    "dev": "concurrently \"npm run dev --workspaces --if-present\"",
-    "build": "npm run build --workspaces --if-present",
-    "install:all": "npm install"
+    "build": "npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend",
+    "start": "npm run start --prefix backend"
   },
-  "devDependencies": {
-    "concurrently": "^8.2.0",
-    "typescript": "^5.1.6"
-  }
+  "keywords": [],
+  "author": "Himanshu",
+  "license": "ISC"
 }
